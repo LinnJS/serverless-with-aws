@@ -2,7 +2,7 @@
 > Learn how to use AWS Lambda functions, by [Scott Moss](https://github.com/hendrixer)
 
 ### tech check
-* Node v8+
+* Node v12+
 * Yarn / NPM (latest)
 
 * Git + Github
