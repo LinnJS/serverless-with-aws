@@ -1,4 +1,4 @@
-module.exports.handler = (event, ctx, done) => {
+module.exports.handler = (event, context, done) => {
   const todos = [
     {id: 1, name: 'clean up', status: 'open'},
     {id: 1, name: 'cook', status: 'done'}
