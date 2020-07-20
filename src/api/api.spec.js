@@ -10,8 +10,8 @@ describe('API', () => {
   test('should get todos', done => {
     request
       .get('/todos')
-      .expect(200, (err, res) => {
-        expect(res.body.data).toHaveLength(2)
+      .expect(200, (error, response) => {
+        expect(response.body.data).toHaveLength(2)
         done()
       })
   })
