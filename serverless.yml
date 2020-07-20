@@ -22,7 +22,7 @@ org: jlinn
 
 provider:
   name: aws
-  runtime: nodejs12.18.1
+  runtime: nodejs12.x
   region: us-east-1
   stage: dev
 
@@ -118,10 +118,8 @@ functions:
   api:
     handler: src/api/api.handler
     events: 
-      - http:
-          path: /api
-          method: GET
-          cors: true
+      - http: ANY /
+      - http: 'ANY /{param+}'
   todos:
     handler: src/api/todos.handler
     events: 
