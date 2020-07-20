@@ -1,3 +1,5 @@
+org: jlinn
+app: serverless-with-aws
 service: serverless
 
 provider:
