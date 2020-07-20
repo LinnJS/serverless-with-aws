@@ -1,12 +1,21 @@
 const express = require('express')
-const http = require('serverless-http')
-
 const app = express()
 
-app.get('/', (request, response) => {
-  response.json({
-    message: 'ok'
-  })
+app.get('/', (req, res) => {
+  res.json({message: 'ok'})
 })
 
-module.exports.handler = http(app)
+app.get('/todos', (req, res) => {
+  const todos = [
+    {id: 1, name: 'clean up', status: 'open'},
+    {id: 1, name: 'cook', status: 'done'}
+  ]
+  res.json({data: todos})
+})
+
+
+app.get('/todos/:todo', (req, res) => {
+  res.json({id: 1, name: 'clean up', status: 'open'})
+})
+
+module.exports = app
